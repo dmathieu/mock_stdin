@@ -1,4 +1,4 @@
-package main
+package mock_stdin
 
 import (
 	"bytes"
