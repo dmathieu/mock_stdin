@@ -1,12 +1,12 @@
-# Mock Stdin [![Build Status](https://travis-ci.org/dmathieu/mock_stdin.svg?branch=master)](https://travis-ci.org/dmathieu/mock_stdin)
+# Safe Buffer [![Build Status](https://travis-ci.org/dmathieu/safe_buffer.svg?branch=master)](https://travis-ci.org/dmathieu/safe_buffer)
 
-This is a very simple library one can use to get a race-conditin free mock of `os.Stdin` in their tests.  
-I have been using a plain `bytes.Buffer` in other tests, but that causes race condition issues, as a read and a write can happen at the same time.
+A very simple buffer adding a mutex between each read and write operation so they can be used without causing race conditions.  
+I am using this as a `os.Stdin` mock in tests.
 
 ## Usage
 
 ```go
-stdin := mock_stdin.NewMock()
+stdin := safe_buffer.NewMock()
 ```
 
 Then, use the mock as a normal ReadWriter.

@@ -1,4 +1,4 @@
-package mock_stdin
+package safe_buffer
 
 import (
 	"bytes"
