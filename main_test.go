@@ -1,4 +1,4 @@
-package safe_buffer
+package safebuffer
 
 import (
 	"io/ioutil"
